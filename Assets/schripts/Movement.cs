@@ -19,9 +19,8 @@ public class Movement : MonoBehaviour
 
     private void Start()
     {
-        PlayerBody = GetComponent<Rigidbody2D>();
-      
-}
+        PlayerBody = GetComponent<Rigidbody2D>(); 
+    }
     void FixedUpdate()
     {
         int animalCount = ScoreManager.Instance.AnimalCount;
@@ -39,8 +38,6 @@ public class Movement : MonoBehaviour
         }
         if (animalCount == 3)
         {
-            
-
             speed = 120;
             MaxX = 90;
         }
@@ -62,8 +59,6 @@ public class Movement : MonoBehaviour
         {
             moveX *= speed;
             PlayerBody.AddForce(new Vector2(moveX, 0));
-
-          
         }
         
 
