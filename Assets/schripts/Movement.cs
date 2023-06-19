@@ -12,31 +12,26 @@ public class Movement : MonoBehaviour
     public float speed;
 
 
-    public Animator player;
-    
-
-
-
     private void Start()
     {
-        PlayerBody = GetComponent<Rigidbody2D>(); 
+        PlayerBody = GetComponent<Rigidbody2D>();
     }
     void FixedUpdate()
     {
         int animalCount = ScoreManager.Instance.AnimalCount;
         moveX = Input.GetAxis("Horizontal");
 
-        if (animalCount == 1)
+        if (ScoreManager.Instance.AnimalCount == 1)
         {
             speed = 80;
             MaxX = 20;
         }
-        if (animalCount == 2)
+        if (ScoreManager.Instance.AnimalCount == 2)
         {
             speed = 80;
             MaxX = 20;
         }
-        if (animalCount == 3)
+        if (ScoreManager.Instance.AnimalCount == 3)
         {
             speed = 120;
             MaxX = 90;
@@ -48,7 +43,7 @@ public class Movement : MonoBehaviour
             Fox.flipX = true;
             Bunny.flipX = true;
         }
-        else if( moveX >0)
+        else if (moveX > 0)
         {
             Bear.flipX = false;
             Fox.flipX = false;
@@ -60,10 +55,6 @@ public class Movement : MonoBehaviour
             moveX *= speed;
             PlayerBody.AddForce(new Vector2(moveX, 0));
         }
-        
-
-
-
     }
 
 

@@ -8,7 +8,8 @@ public class ScoreManager : Singleton<ScoreManager>
 {
 
     [NonSerialized] public int AnimalCount = 0;
-    
+    [NonSerialized] public int CoinCount = 0;
+
 
 
     void Awake()

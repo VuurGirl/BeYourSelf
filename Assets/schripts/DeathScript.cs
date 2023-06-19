@@ -8,14 +8,6 @@ public class DeathScript : MonoBehaviour
 
     public string levelName;
 
-    
-    void Start()
-    {
-
-    }
-
-
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {

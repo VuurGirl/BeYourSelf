@@ -313,10 +313,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1431989ab4e78a34985976cb4d60f886, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Fox: {fileID: 9151056605040383711}
+  Bear: {fileID: 9151056603056995074}
+  Bunny: {fileID: 9151056603070864306}
   moveX: 1
-  MaxX: 5
-  speed: 50
-  player: {fileID: 9151056605040383710}
+  MaxX: 40
+  speed: 160
 --- !u!114 &9151056604003339862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,11 +331,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5139d0bee8e5f146ae50e3ef3d2d1c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpForce: 20
+  JumpForce: 30
   grounded: 0
-  player: {fileID: 9151056605040383710}
   Small: 0
   UIE: {fileID: 0}
+  height: 0.55
+  ground:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &9151056605040383703
 GameObject:
   m_ObjectHideFlags: 0

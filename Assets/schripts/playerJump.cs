@@ -11,6 +11,8 @@ public class playerJump : MonoBehaviour
     private CircleCollider2D PlayerBox;
     public bool Small = false;
    public GameObject UIE;
+    public float height = 1;
+    public LayerMask ground;
 
 
     void Start()
@@ -27,10 +29,23 @@ public class playerJump : MonoBehaviour
         if (animalCount == 1)
         {
             JumpForce = 40;
+            if (Small == true)
+            {
+                PlayerBox.radius *= 2;
+                PlayerIcon.localScale = new Vector2(1, 1);
+                Small = false;
+            }
         }
         if (animalCount == 2)
         {
             JumpForce = 30;
+            if (Small == true)
+            {
+                PlayerBox.radius *= 2;
+                PlayerIcon.localScale = new Vector2(1, 1);
+                Small = false;
+            }
+            
         }
         if (animalCount == 3)
         {
@@ -62,15 +77,19 @@ public class playerJump : MonoBehaviour
             PlayerBody.velocity = JumpVector;
             grounded = false;
         }
-    }
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        grounded = true;
+        RaycastHit2D[] hits = Physics2D.RaycastAll(transform.position, Vector3.down, height, ground);
+        if (hits.Length > 0)
+        {
+            grounded = true;
+        }
+        else
+        {
+            grounded = false;
+        }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    void OnDrawGizmos()
     {
-        grounded = false;
+        Gizmos.DrawLine(transform.position, transform.position + height * Vector3.down);
     }
-
 }

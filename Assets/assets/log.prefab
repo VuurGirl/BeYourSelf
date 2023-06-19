@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8287742563169942815}
   - component: {fileID: 8287742563169942811}
   - component: {fileID: 8287742563169942820}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: log
   m_TagString: Log
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8287742563169942814}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 19.605085, y: 1.85, z: 0}
   m_LocalScale: {x: 0.6928, y: 0.7461, z: 1}
   m_ConstrainProportionsScale: 0
@@ -126,12 +126,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e9a085b2d746744ab9c371a3b41a2eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LogBody: {fileID: 8287742563169942811}
   pickUp: 0
   Inform: 0
-  bear: {fileID: 0}
+  bear: {fileID: 9151056604003339848, guid: a25dc102b991d924a8ea7642e4e51ed9, type: 3}
   power: 300
-  UIE: {fileID: 0}
+  UIE: {fileID: 1493557279715435360, guid: a512e43cb8b573442b7a67c198398ad3, type: 3}
+  switcheroe: 0
 --- !u!50 &8287742563169942811
 Rigidbody2D:
   serializedVersion: 4
